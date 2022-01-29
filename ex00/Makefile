@@ -6,7 +6,7 @@
 #    By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/24 14:54:10 by spoliart          #+#    #+#              #
-#    Updated: 2022/01/29 20:30:18 by spoliart         ###   ########.fr        #
+#    Updated: 2022/01/29 21:40:51 by spoliart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,10 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 SRCS	=	main.cpp \
 			Cat.cpp \
-			Dog.cpp
+			Dog.cpp \
+			Animal.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 
 all:	$(NAME)

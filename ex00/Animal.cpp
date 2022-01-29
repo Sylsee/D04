@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:27:38 by spoliart         ###   ########.fr       */
+/*   Created: 2022/01/29 21:13:04 by spoliart          #+#    #+#             */
+/*   Updated: 2022/01/29 21:28:16 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Animal.hpp"
 
-Cat::Cat( void )
+Animal::Animal( void )
 {
-	std::cout << "Cat constructor called" << std::endl;
-	this->_type = "Cat";
-
+	std::cout << "Animal constructor called" << std::endl;
 	return ;
 }
 
-Cat::Cat( Cat const & src )
+Animal::Animal( Animal const & src )
 {
 	*this = src;
 
 	return ;
 }
 
-Cat::~Cat( void )
+Animal::~Animal( void )
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 	return ;
 }
 
-Cat &	Cat::operator=( Cat const & src )
+Animal &	Animal::operator=( Animal const & src )
 {
 	if ( this != &src )
 		*this = src;
@@ -41,7 +39,12 @@ Cat &	Cat::operator=( Cat const & src )
 	return *this;
 }
 
-void	Cat::makeSound( void ) const
+std::string	Animal::getType( void ) const
 {
-	std::cout << "MIAOU !" << std::endl;
+	return this->_type;
+}
+
+void	Animal::makeSound( void ) const
+{
+	return ;
 }

@@ -6,14 +6,16 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:31:24 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 20:31:24 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/29 21:25:34 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_H
 # define DOG_H
 
-class Dog
+#include "Animal.hpp"
+
+class Dog : public Animal
 {
 public:
 
@@ -23,11 +25,7 @@ public:
 
 	Dog &	operator=( Dog const & rhs );
 
-protected:
-
-
-private:
-
+	virtual void	makeSound( void ) const;
 
 };
 

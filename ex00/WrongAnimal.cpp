@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:27:38 by spoliart         ###   ########.fr       */
+/*   Created: 2022/01/29 21:34:07 by spoliart          #+#    #+#             */
+/*   Updated: 2022/01/29 21:45:59 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongAnimal.hpp"
 
-Cat::Cat( void )
+WrongAnimal::WrongAnimal( void )
 {
-	std::cout << "Cat constructor called" << std::endl;
-	this->_type = "Cat";
-
+	std::cout << "WrongAnimal constructor called" << std::endl;
 	return ;
 }
 
-Cat::Cat( Cat const & src )
+WrongAnimal::WrongAnimal( WrongAnimal const & src )
 {
 	*this = src;
 
 	return ;
 }
 
-Cat::~Cat( void )
+WrongAnimal::~WrongAnimal( void )
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "WrongAnimal destructor called" << std::endl;
 	return ;
 }
 
-Cat &	Cat::operator=( Cat const & src )
+WrongAnimal &	WrongAnimal::operator=( WrongAnimal const & src )
 {
 	if ( this != &src )
 		*this = src;
@@ -41,7 +39,14 @@ Cat &	Cat::operator=( Cat const & src )
 	return *this;
 }
 
-void	Cat::makeSound( void ) const
+std::string	WrongAnimal::getType( void ) const
 {
-	std::cout << "MIAOU !" << std::endl;
+	return this->_type;
+}
+
+void	WrongAnimal::makeSound( void ) const
+{
+	std::cout << "MEUUUUUH !" << std::endl;
+
+	return ;
 }

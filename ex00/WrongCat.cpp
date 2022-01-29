@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:27:38 by spoliart         ###   ########.fr       */
+/*   Created: 2022/01/29 21:38:09 by spoliart          #+#    #+#             */
+/*   Updated: 2022/01/29 21:46:24 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat( void )
+WrongCat::WrongCat( void )
 {
-	std::cout << "Cat constructor called" << std::endl;
-	this->_type = "Cat";
-
+	std::cout << "WrongCat constructor called" << std::endl;
+	this->_type = "Wrong Cat";
 	return ;
 }
 
-Cat::Cat( Cat const & src )
+WrongCat::WrongCat( WrongCat const & src )
 {
 	*this = src;
 
 	return ;
 }
 
-Cat::~Cat( void )
+WrongCat::~WrongCat( void )
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "WrongCat destructor called" << std::endl;
 	return ;
 }
 
-Cat &	Cat::operator=( Cat const & src )
+WrongCat &	WrongCat::operator=( WrongCat const & src )
 {
 	if ( this != &src )
 		*this = src;
@@ -41,7 +40,7 @@ Cat &	Cat::operator=( Cat const & src )
 	return *this;
 }
 
-void	Cat::makeSound( void ) const
+void	WrongCat::makeSound( void ) const
 {
-	std::cout << "MIAOU !" << std::endl;
+	std::cout << "MIAOUU !" << std::endl;
 }
