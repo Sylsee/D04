@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:58:50 by spoliart         ###   ########.fr       */
+/*   Created: 2022/01/29 21:50:44 by spoliart          #+#    #+#             */
+/*   Updated: 2022/01/29 22:27:08 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef BRAIN_H
+# define BRAIN_H
 
-#include "Animal.hpp"
+#include <iostream>
 
-class Cat : public Animal
+class Brain
 {
 public:
 
-	Cat( void );
-	Cat( Cat const & src );
-	virtual ~Cat( void );
+	std::string	ideas[100];
 
-	Cat &	operator=( Cat const & rhs );
+	Brain( void );
+	Brain( Brain const & src );
+	~Brain( void );
 
-	virtual void	makeSound( void ) const;
+	Brain &	operator=( Brain const & rhs );
 
 };
 
-#endif /* CAT_H */
+#endif /* BRAIN_H */

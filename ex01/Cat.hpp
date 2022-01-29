@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:58:50 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/29 22:35:38 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CAT_H
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -26,6 +27,13 @@ public:
 	Cat &	operator=( Cat const & rhs );
 
 	virtual void	makeSound( void ) const;
+
+	virtual void	displayIdea( void ) const;
+	virtual void	setIdea( std::string idea );
+
+private:
+
+	Brain	*_brain;
 
 };
 

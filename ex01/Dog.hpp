@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:58:50 by spoliart         ###   ########.fr       */
+/*   Created: 2022/01/29 20:31:24 by spoliart          #+#    #+#             */
+/*   Updated: 2022/01/29 22:23:39 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef DOG_H
+# define DOG_H
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Cat : public Animal
+class Dog : public Animal
 {
 public:
 
-	Cat( void );
-	Cat( Cat const & src );
-	virtual ~Cat( void );
+	Dog( void );
+	Dog( Dog const & src );
+	virtual ~Dog( void );
 
-	Cat &	operator=( Cat const & rhs );
+	Dog &	operator=( Dog const & rhs );
 
 	virtual void	makeSound( void ) const;
 
+	virtual void	displayIdea( void ) const;
+	virtual void	setIdea( std::string idea );
+
+private:
+
+	Brain	*_brain;
+
 };
 
-#endif /* CAT_H */
+#endif /* DOG_H */

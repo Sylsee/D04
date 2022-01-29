@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:31:24 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:25:34 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/29 21:58:56 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 
 	Dog( void );
 	Dog( Dog const & src );
-	~Dog( void );
+	virtual ~Dog( void );
 
 	Dog &	operator=( Dog const & rhs );
 

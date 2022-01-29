@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 21:58:50 by spoliart         ###   ########.fr       */
+/*   Created: 2022/01/29 21:13:04 by spoliart          #+#    #+#             */
+/*   Updated: 2022/01/29 22:24:15 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef ANIMAL_H
+# define ANIMAL_H
 
-#include "Animal.hpp"
+#include <iostream>
 
-class Cat : public Animal
+class Animal
 {
 public:
 
-	Cat( void );
-	Cat( Cat const & src );
-	virtual ~Cat( void );
+	Animal( void );
+	Animal( Animal const & src );
+	virtual ~Animal( void );
 
-	Cat &	operator=( Cat const & rhs );
+	Animal &	operator=( Animal const & rhs );
+
+	std::string		getType( void ) const;
 
 	virtual void	makeSound( void ) const;
 
+	virtual void	setIdea( std::string idea );
+	virtual void	displayIdea( void ) const;
+
+protected:
+
+	std::string	_type;
+
 };
 
-#endif /* CAT_H */
+#endif /* ANIMAL_H */
