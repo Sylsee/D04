@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:31:24 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 22:35:06 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:24:32 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,11 @@ Dog::Dog( void )
 
 	this->_brain = new Brain();
 	this->_type = "Dog";
-
-	return ;
 }
 
 Dog::Dog( Dog const & src )
 {
-	*this = src;
-
-	return ;
+	this->_brain = new Brain(*src._brain);
 }
 
 Dog::~Dog( void )
@@ -34,26 +30,17 @@ Dog::~Dog( void )
 	std::cout << "Dog destructor called" << std::endl;
 
 	delete this->_brain;
-
-	return ;
 }
 
 Dog &	Dog::operator=( Dog const & src )
 {
-	if ( this != &src )
-		*this = src;
+	if ( this != &src ) {
+		delete this->_brain;
+
+		this->_brain = new Brain(*src._brain);
+	}
 
 	return *this;
-}
-
-void	Dog::displayIdea( void ) const
-{
-	std::cout << "Dog idea: " << this->_brain->ideas[0] << std::endl;
-}
-
-void	Dog::setIdea( std::string idea )
-{
-	this->_brain->ideas[0] = idea;
 }
 
 void	Dog::makeSound( void ) const

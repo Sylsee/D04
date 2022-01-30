@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:31:17 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 22:35:26 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:22:58 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ Cat::Cat( void )
 
 Cat::Cat( Cat const & src )
 {
-	*this = src;
+	std::cout << "Cat copy constructor called" << std::endl;
 
-	return ;
+	this->_brain = new Brain(*src._brain);
 }
 
 Cat::~Cat( void )
@@ -34,26 +34,17 @@ Cat::~Cat( void )
 	std::cout << "Cat destructor called" << std::endl;
 
 	delete this->_brain;
-
-	return ;
 }
 
 Cat &	Cat::operator=( Cat const & src )
 {
-	if ( this != &src )
-		*this = src;
+	if ( this != &src ) {
+		delete this->_brain;
+
+		this->_brain = new Brain(*src._brain);
+	}
 
 	return *this;
-}
-
-void	Cat::displayIdea( void ) const
-{
-	std::cout << "Cat idea: " << this->_brain->ideas[0] << std::endl;
-}
-
-void	Cat::setIdea( std::string idea )
-{
-	this->_brain->ideas[0] = idea;
 }
 
 void	Cat::makeSound( void ) const

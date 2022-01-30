@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:30:27 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 23:00:14 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:26:48 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,6 @@ int	main( void )
 
 	cat.makeSound();
 	dog.makeSound();
-
-	cat.setIdea("I love balls of wool");
-	cat.displayIdea();
-	dog.setIdea("WAF WAF WAF");
-	dog.displayIdea();
 
 	return 0;
 }
