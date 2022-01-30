@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:18:36 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 23:27:24 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:34:04 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ public:
 
 	virtual AMateria*	clone( void ) const;
 	virtual void		use( ICharacter& target );
-
-private:
-
 
 };
 

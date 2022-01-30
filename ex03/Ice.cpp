@@ -6,21 +6,19 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:18:14 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 23:31:35 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:36:08 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice( void ) : _type("ice")
+Ice::Ice( void ) : AMateria("ice")
 {
 	return ;
 }
 
-Ice::Ice( Ice const & src )
+Ice::Ice( Ice const & src ) : AMateria("ice")
 {
-	*this = src;
-
 	return ;
 }
 
@@ -31,15 +29,18 @@ Ice::~Ice( void )
 
 Ice &	Ice::operator=( Ice const & src )
 {
-	if ( this != &src )
-		*this = src;
+	if (src != &src)
+		this->AMateria::operator=(src);
 
 	return *this;
 }
 
 AMateria*	clone( void ) const
 {
-	Ice*	clone = new Fire();
+	return (new Ice(*this));
+}
 
-	return clone;
+void	Ice::use( ICharacter & target )
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
