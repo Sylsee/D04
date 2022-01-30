@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 21:13:04 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 22:23:07 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:15:41 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,17 +45,6 @@ std::string	Animal::getType( void ) const
 }
 
 void	Animal::makeSound( void ) const
-{
-	return ;
-}
-
-void	Animal::setIdea( std::string idea )
-{
-	(void)idea;
-	return ;
-}
-
-void	Animal::displayIdea( void ) const
 {
 	return ;
 }

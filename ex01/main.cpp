@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:30:27 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 22:36:48 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:15:09 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,6 @@ int	main( void )
 
 	for (int i = 0; i < 10; i++) {
 		animal[i]->makeSound();
-		if (i % 2)
-			animal[i]->setIdea("I hate Humans");
-		else
-			animal[i]->setIdea("I love bones");
-		animal[i]->displayIdea();
 	}
 
 	std::cout << std::endl;

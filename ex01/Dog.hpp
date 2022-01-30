@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:31:24 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 22:23:39 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/01/31 00:11:19 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ public:
 	Dog &	operator=( Dog const & rhs );
 
 	virtual void	makeSound( void ) const;
-
-	virtual void	displayIdea( void ) const;
-	virtual void	setIdea( std::string idea );
 
 private:
 
