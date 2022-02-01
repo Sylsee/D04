@@ -6,14 +6,14 @@
 #    By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/24 14:54:10 by spoliart          #+#    #+#              #
-#    Updated: 2022/02/01 18:53:16 by spoliart         ###   ########.fr        #
+#    Updated: 2022/02/01 19:10:31 by spoliart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	fun
 
 CC		=	c++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g
 
 SRCS	=	main.cpp \
 			Character.cpp \

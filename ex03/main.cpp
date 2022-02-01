@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:01:42 by spoliart          #+#    #+#             */
-/*   Updated: 2022/02/01 18:41:59 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:25:33 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,43 @@
 
 int	main( void )
 {
-	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
+	{
+		Character	deepCopy = Character("Eude");
 
-	ICharacter* me = new Character("me");
+		deepCopy.equip(new Ice());
+		deepCopy.equip(new Cure());
 
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+		Character	deepCopy2 = deepCopy;
 
-	ICharacter* bob = new Character("bob");
+		deepCopy.use(0, deepCopy2);
+		deepCopy2.use(0, deepCopy);
 
-	me->use(0, *bob);
-	me->use(1, *bob);
+		deepCopy.unequip(0);
+		deepCopy2.use(0, deepCopy);
+	}
+	std::cout << std::endl << std::endl;
+	{
+		IMateriaSource* src = new MateriaSource();
+		src->learnMateria(new Ice());
+		src->learnMateria(new Cure());
 
-	delete bob;
-	delete me;
-	delete src;
+		ICharacter* me = new Character("me");
+
+		AMateria* tmp;
+		tmp = src->createMateria("ice");
+		me->equip(tmp);
+		tmp = src->createMateria("cure");
+		me->equip(tmp);
+
+		ICharacter* bob = new Character("bob");
+
+		me->use(0, *bob);
+		me->use(1, *bob);
+
+		delete bob;
+		delete me;
+		delete src;
+	}
 
 	return 0;
 }
