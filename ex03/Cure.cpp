@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:18:36 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/31 00:35:31 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/02/01 18:11:34 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cure::Cure( void ) : AMateria("cure")
 
 Cure::Cure( Cure const & src ) : AMateria("cure")
 {
-	return ;
+	(void)src;
 }
 
 Cure::~Cure( void )
@@ -35,9 +35,9 @@ Cure &	Cure::operator=( Cure const & src )
 	return *this;
 }
 
-AMateria*	clone( void ) const
+AMateria*	Cure::clone( void ) const
 {
-	return (new Cure(*this));
+	return (new Cure());
 }
 
 void	Cure::use( ICharacter & target )

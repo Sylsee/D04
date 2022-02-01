@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:07:35 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/31 00:31:00 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/02/01 18:09:43 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ AMateria &	AMateria::operator=( AMateria const & src )
 	return *this;
 }
 
-void	use( ICharacter & target )
+void	AMateria::use( ICharacter & target )
 {
 	(void)target;
 }
 
-std::string const &	getType( void ) const
+std::string const &	AMateria::getType( void ) const
 {
 	return this->_type;
 }
 
-bool	isEmpty( void ) const
+bool	AMateria::isEmpty( void ) const
 {
 	return this->_type.empty();
 }

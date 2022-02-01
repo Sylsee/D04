@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:38:26 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/30 21:38:30 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/02/01 18:08:34 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include "ICharacter.hpp"
+# include "AMateria.hpp"
 
 class Character : public ICharacter
 {
@@ -31,12 +32,12 @@ public:
 	virtual std::string const &	getName( void ) const;
 	virtual void				equip( AMateria * m );
 	virtual void				unequip( int idx );
-	virtual void				use( int idx, ICharacter &target );
+	virtual void				use( int idx, ICharacter & target );
 
 private:
 
 	std::string	_name;
-	AMateria	_materia[4];
+	AMateria	*_inventory[4];
 
 };
 

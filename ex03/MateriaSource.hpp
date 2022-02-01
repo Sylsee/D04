@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 23:18:36 by spoliart          #+#    #+#             */
-/*   Updated: 2022/02/01 18:10:27 by spoliart         ###   ########.fr       */
+/*   Created: 2022/02/01 17:01:50 by spoliart          #+#    #+#             */
+/*   Updated: 2022/02/01 18:12:57 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_H
-# define CURE_H
+#ifndef MATERIASOURCE_H
+# define MATERIASOURCE_H
 
 # include <iostream>
 # include "AMateria.hpp"
+# include "IMateriaSource.hpp"
 
-class Cure : public AMateria
+class MateriaSource : public IMateriaSource
 {
 
 public:
 
-	Cure( void );
-	Cure( Cure const & src );
-	virtual ~Cure( void );
+	MateriaSource( void );
+	MateriaSource( MateriaSource const & src );
+	virtual ~MateriaSource( void );
 
-	Cure &	operator=( Cure const & src );
+	MateriaSource &	operator=( MateriaSource const & src );
 
-	virtual AMateria*	clone( void ) const;
-	virtual void		use( ICharacter& target );
+	virtual void		learnMateria( AMateria * m );
+	virtual AMateria *	createMateria( std::string const & type );
+
+private:
+
+	AMateria	*_materia[4];
 
 };
 
-#endif /* CURE_H */
+#endif /* MATERIASOURCE_H */

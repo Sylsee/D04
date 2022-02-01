@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:18:14 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/31 00:36:08 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/02/01 18:12:09 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Ice::Ice( void ) : AMateria("ice")
 
 Ice::Ice( Ice const & src ) : AMateria("ice")
 {
-	return ;
+	(void)src;
 }
 
 Ice::~Ice( void )
@@ -29,15 +29,15 @@ Ice::~Ice( void )
 
 Ice &	Ice::operator=( Ice const & src )
 {
-	if (src != &src)
+	if (this != &src)
 		this->AMateria::operator=(src);
 
 	return *this;
 }
 
-AMateria*	clone( void ) const
+AMateria*	Ice::clone( void ) const
 {
-	return (new Ice(*this));
+	return (new Ice());
 }
 
 void	Ice::use( ICharacter & target )

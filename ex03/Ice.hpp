@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:18:14 by spoliart          #+#    #+#             */
-/*   Updated: 2022/01/29 23:29:07 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/02/01 18:10:42 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define ICE_H
 
 # include <iostream>
+# include "AMateria.hpp"
 
-class Ice
+class Ice : public AMateria
 {
 
 public:

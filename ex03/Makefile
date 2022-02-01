@@ -6,16 +6,21 @@
 #    By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/24 14:54:10 by spoliart          #+#    #+#              #
-#    Updated: 2022/01/29 23:01:37 by spoliart         ###   ########.fr        #
+#    Updated: 2022/02/01 18:53:16 by spoliart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	polymorphism
+NAME	=	fun
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 SRCS	=	main.cpp \
+			Character.cpp \
+			AMateria.cpp \
+			Cure.cpp \
+			Ice.cpp \
+			MateriaSource.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 
 all:	$(NAME)
