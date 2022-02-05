@@ -6,7 +6,7 @@
 /*   By: spoliart <spoliart@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 23:07:35 by spoliart          #+#    #+#             */
-/*   Updated: 2022/02/01 18:09:43 by spoliart         ###   ########.fr       */
+/*   Updated: 2022/02/05 23:11:57 by spoliart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ AMateria::AMateria( void )
 
 AMateria::AMateria( AMateria const & src )
 {
-	this->_type = src._type;
+	*this = src;
 }
 
 AMateria::AMateria( std::string const & type )
