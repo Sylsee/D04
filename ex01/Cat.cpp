@@ -24,7 +24,7 @@ Cat::Cat( void )
 
 Cat::Cat( Cat const & src )
 {
-	this->_brain = new Brain(*src._brain);
+	*this = src;
 }
 
 Cat::~Cat( void )

@@ -19,10 +19,7 @@ Brain::Brain( void )
 
 Brain::Brain( Brain const & src )
 {
-	for (int i = 0; i < 100; i++)
-		this->ideas[i] = src.ideas[i];
-
-	return ;
+	*this = src;
 }
 
 Brain::~Brain( void )

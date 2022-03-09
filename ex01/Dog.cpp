@@ -24,7 +24,7 @@ Dog::Dog( void )
 
 Dog::Dog( Dog const & src )
 {
-	this->_brain = new Brain(*src._brain);
+	*this = src;
 }
 
 Dog::~Dog( void )
